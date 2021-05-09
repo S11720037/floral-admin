@@ -5,6 +5,7 @@ function App() {
   const [image, setImage] = useState("");
   const [flower, setFlower] = useState("");
   const [price, setPrice] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleImage = e => {
     const reader = new FileReader();
@@ -17,6 +18,8 @@ function App() {
   const handleSubmit = e => {
     e.preventDefault();
 
+    setIsLoading(true);
+
     firebase
       .database()
       .ref("flowers/")
@@ -27,9 +30,11 @@ function App() {
       })
       .then(() => {
         alert("berhasil, berhasil, berhasil hore");
-        clearForm();
       })
       .catch(() => alert("gagal"));
+
+    setIsLoading(false);
+    clearForm();
   };
 
   const clearForm = () => {
@@ -61,6 +66,7 @@ function App() {
             type="text"
             className="form-control"
             id="name"
+            value={flower}
             onChange={e => {
               setFlower(e.target.value);
             }}
@@ -74,16 +80,30 @@ function App() {
             type="number"
             className="form-control"
             id="price"
+            value={price}
             onChange={e => setPrice(e.target.value)}
           />
         </div>
-        <button
-          type="submit"
-          className="btn btn-primary"
-          onClick={handleSubmit}
-        >
-          Submit
-        </button>
+        {isLoading && (
+          <button
+            type="submit"
+            className="btn btn-primary disabled"
+            onClick={handleSubmit}
+          >
+            <div className="spinner-border" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </div>
+          </button>
+        )}
+        {!isLoading && (
+          <button
+            type="submit"
+            className="btn btn-primary"
+            onClick={handleSubmit}
+          >
+            Submit
+          </button>
+        )}
       </form>
     </div>
   );
