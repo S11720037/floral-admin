@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/floral-admin/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/floral-admin/static/js/main.0fba3a20.chunk.js",
+    "main.js.map": "/floral-admin/static/js/main.0fba3a20.chunk.js.map",
+    "runtime-main.js": "/floral-admin/static/js/runtime-main.a9b94ff2.js",
+    "runtime-main.js.map": "/floral-admin/static/js/runtime-main.a9b94ff2.js.map",
+    "static/js/2.30da9c4b.chunk.js": "/floral-admin/static/js/2.30da9c4b.chunk.js",
+    "static/js/2.30da9c4b.chunk.js.map": "/floral-admin/static/js/2.30da9c4b.chunk.js.map",
+    "static/js/3.0dddccff.chunk.js": "/floral-admin/static/js/3.0dddccff.chunk.js",
+    "static/js/3.0dddccff.chunk.js.map": "/floral-admin/static/js/3.0dddccff.chunk.js.map",
+    "index.html": "/floral-admin/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/floral-admin/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.30da9c4b.chunk.js.LICENSE.txt": "/floral-admin/static/js/2.30da9c4b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a9b94ff2.js",
+    "static/js/2.30da9c4b.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.0fba3a20.chunk.js"
+  ]
+}
