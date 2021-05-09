@@ -26,13 +26,23 @@ function App() {
         price: price,
       })
       .then(() => {
-        console.log("berhasil, berhasil, hore");
+        alert("berhasil, berhasil, berhasil hore");
+        clearForm();
       })
-      .catch(() => console.log("gagal"));
+      .catch(() => alert("gagal"));
+  };
+
+  const clearForm = () => {
+    setImage("");
+    setFlower("");
+    setPrice(0);
   };
 
   return (
-    <div className="container-md">
+    <div className="container-md pt-3">
+      <h1 className="text-center">Floral-App Admin</h1>
+      <hr />
+
       <form className="border rounded shadow p-3 mt-3">
         <div className="mb-3">
           <input
