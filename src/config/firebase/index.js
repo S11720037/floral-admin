@@ -4,6 +4,8 @@ import "firebase/database";
 var firebaseConfig = {
   apiKey: "AIzaSyDpmGGbZvkncCkutw3CxQfVdb4SLV20pkw",
   authDomain: "floral-app-f471a.firebaseapp.com",
+  databaseURL:
+    "https://floral-app-f471a-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "floral-app-f471a",
   storageBucket: "floral-app-f471a.appspot.com",
   messagingSenderId: "23457594764",
